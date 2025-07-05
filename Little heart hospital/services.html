@@ -1,0 +1,130 @@
+<!-- services.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services - Little Hearts Hospital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .services-section {
+      padding: 4rem 1rem;
+      background: #f0f9ff;
+    }
+    .services-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #0c4a6e;
+      margin-bottom: 0.5rem;
+    }
+    .services-section .subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 3rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .service-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .icon-circle {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: #bae6fd;
+    }
+    .icon-circle img {
+      width: 40px;
+    }
+    .service-card h3 {
+      font-size: 1.25rem;
+      margin: 0.75rem 0 0.5rem;
+      color: #0f172a;
+    }
+    .service-card p {
+      color: #475569;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-section">
+      <img src="assets/logo.jpg" alt="Little Hearts Logo" class="logo-img" />
+      <div class="logo-text">
+        <h1>Little Hearts Hospital</h1>
+        <p>Pediatric Care Excellence</p>
+      </div>
+    </div>
+    <a href="tel:911" class="emergency-btn">
+      <i class="fas fa-phone"></i> Emergency: 911
+    </a>
+  </header>
+
+  <section class="services-section">
+    <div class="container">
+      <h2>Our Specialized Services</h2>
+      <p class="subtitle">
+        Comprehensive pediatric care with specialized departments designed for children's unique needs
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon-circle bg-blue">
+            <img src="assets/baby.png" alt="Newborn Care" />
+          </div>
+          <h3>Newborn Care</h3>
+          <p>Comprehensive care for newborns and infants with specialized NICU services.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon-circle bg-red">
+            <img src="assets/heart.png" alt="Pediatric Cardiology" />
+          </div>
+          <h3>Pediatric Cardiology</h3>
+          <p>Advanced heart care for children with congenital and acquired heart conditions.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon-circle bg-green">
+            <img src="assets/stethoscope.png" alt="General Pediatrics" />
+          </div>
+          <h3>General Pediatrics</h3>
+          <p>Routine check-ups, vaccinations, and preventive care for children of all ages.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon-circle bg-purple">
+            <img src="assets/customer-support.png" alt="Family Support" />
+          </div>
+          <h3>Family Support</h3>
+          <p>Counseling and support services for families during challenging times.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="custom-footer">
+        <div class="footer-bottom">
+      <p>&copy; 2025 Little Hearts Hospital. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

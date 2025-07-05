@@ -1,0 +1,111 @@
+<!-- appointment.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule Appointment - Little Hearts Hospital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .appointment-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    .appointment-form label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+      font-weight: 600;
+    }
+    .appointment-form input,
+    .appointment-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .appointment-form button {
+      display: block;
+      width: 100%;
+      margin-top: 1.5rem;
+      padding: 0.75rem;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .appointment-form button:hover {
+      background-color: #2563eb;
+    }
+    .success-message {
+      display: none;
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-section">
+      <img src="assets/logo.jpg" alt="Little Hearts Logo" class="logo-img" />
+      <div class="logo-text">
+        <h1>Little Hearts Hospital</h1>
+        <p>Pediatric Care Excellence</p>
+      </div>
+    </div>
+    <a href="tel:911" class="emergency-btn">
+      <i class="fas fa-phone"></i> Emergency: 911
+    </a>
+  </header>
+
+  <section class="cta-section">
+    <div class="cta-container">
+      <h2>Schedule an Appointment</h2>
+      <form class="appointment-form" id="appointmentForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Fullname" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date"  required>
+
+        <label for="time">Preferred Time:</label>
+        <input type="time" id="time" name="time"  required>
+
+        <label for="message">Reason for Visit:</label>
+        <textarea id="message" name="message" rows="4" placeholder="reason" required></textarea>
+
+        <button type="submit" class="btn-primary">Submit</button>
+        <p class="success-message" id="successMessage">Your appointment has been scheduled successfully!</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="custom-footer">
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Little Hearts Hospital. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("appointmentForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("successMessage").style.display = "block";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
